@@ -104,7 +104,6 @@ initLength()
 const initTextFields = () => {
     const textFields = []
     for (const textField of document.querySelectorAll('.mdc-text-field')) {
-        debugger
         textFields.push(new MDCTextField(textField))
     }
     addEventListener('resize', () => {
