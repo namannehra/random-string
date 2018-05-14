@@ -1,0 +1,52 @@
+$mdc-theme-primary: #000000
+$mdc-theme-secondary: #000000
+$mdc-theme-on-primary: #ffffff
+$mdc-theme-on-secondary: #ffffff
+
+@import '@material/form-field/mdc-form-field'
+@import '@material/checkbox/mdc-checkbox'
+@import '@material/textfield/mdc-text-field'
+@import '@material/button/mdc-button'
+@import '@material/snackbar/mdc-snackbar'
+
+body
+    font-family: 'Source Code Pro', monospace
+    margin: 0
+
+#grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 16px
+    margin: 16px 32px
+    @media (min-width: 480px)
+        margin-right: 64px
+        margin-left: 64px
+    @media (min-width: 600px)
+        width: 480px
+        margin-right: auto
+        margin-left: auto
+
+h1
+    grid-column-end: span 3
+    font-weight: 500
+    margin: 0 -4px
+
+.checkbox-container
+    grid-column-end: span 2
+    margin-left: -11px
+
+    label
+        font-family: 'Source Code Pro', monospace
+        font-size: medium
+
+.mdc-text-field
+    grid-column-end: span 2
+    margin: 0 !important
+
+    input, label
+        font-family: 'Source Code Pro', monospace
+
+.mdc-button
+    grid-column-end: span 2
+    border-radius: 4px
+    height: 46px

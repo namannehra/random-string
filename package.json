@@ -1,0 +1,41 @@
+{
+    "name": "random-string",
+    "version": "1.0.0",
+    "description": "Website to generate string of random characters",
+    "homepage": "https://random-string.firebaseapp.com",
+    "repository": "github:namannehra/random-string",
+    "author": "Naman Nehra <naman.nehra98@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack-serve --config webpack.dev.js --open",
+        "build": "webpack --config webpack.dev.js",
+        "watch": "webpack --config webpack.dev.js --watch",
+        "build-prod": "webpack --config webpack.prod.js",
+        "serve": "serve build --port 8080 --open"
+    },
+    "dependencies": {
+        "@material/button": "^0.35.0",
+        "@material/checkbox": "^0.35.0",
+        "@material/form-field": "^0.35.0",
+        "@material/snackbar": "^0.35.0",
+        "@material/textfield": "^0.35.1",
+        "@material/theme": "^0.35.0"
+    },
+    "devDependencies": {
+        "clean-webpack-plugin": "^0.1.19",
+        "css-loader": "^0.28.11",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.4.0",
+        "node-sass": "^4.9.0",
+        "optimize-css-assets-webpack-plugin": "^4.0.1",
+        "sass-loader": "^7.0.1",
+        "serve": "^6.5.6",
+        "style-loader": "^0.21.0",
+        "uglifyjs-webpack-plugin": "^1.2.5",
+        "webpack": "^4.8.3",
+        "webpack-cli": "^2.1.3",
+        "webpack-merge": "^4.1.2",
+        "webpack-serve": "^1.0.2"
+    }
+}
