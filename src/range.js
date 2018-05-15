@@ -13,6 +13,9 @@ class Range {
     get end() {
         return String.fromCharCode(this._end)
     }
+    get size() {
+        return this._size
+    }
     toString() {
         return `start: ${this.start}, end: ${this.end}`
     }
@@ -28,6 +31,9 @@ class RangeSet {
     constructor() {
         this._size = 0
         this._ranges = new Set()
+    }
+    get size() {
+        return this._size
     }
     add(range) {
         for (const existingRange of this._ranges) {

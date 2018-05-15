@@ -100,6 +100,15 @@ const initLength = () => {
 }
 initLength()
 
+const generate = () => {
+    let str = ''
+    for (let i = 0; i < length; i++) {
+        str += characters.random()
+    }
+    stringEle.value = str
+}
+generate()
+
 /* TextFields breaks on resize */
 const initTextFields = () => {
     const textFields = []
@@ -113,15 +122,6 @@ const initTextFields = () => {
     })
 }
 initTextFields()
-
-const generate = () => {
-    let str = ''
-    for (let i = 0; i < length; i++) {
-        str += characters.random()
-    }
-    stringEle.value = str
-}
-generate()
 
 const generateEle = document.querySelector('#generate')
 generateEle.addEventListener('click', generate)

@@ -30,7 +30,7 @@
         "node-sass": "^4.9.0",
         "optimize-css-assets-webpack-plugin": "^4.0.1",
         "sass-loader": "^7.0.1",
-        "serve": "^6.5.6",
+        "serve": "^6.5.7",
         "style-loader": "^0.21.0",
         "uglifyjs-webpack-plugin": "^1.2.5",
         "webpack": "^4.8.3",
