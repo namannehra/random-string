@@ -9,16 +9,21 @@ $mdc-theme-on-secondary: #ffffff
 @import '@material/button/mdc-button'
 @import '@material/snackbar/mdc-snackbar'
 
+html
+    height: 100%
+
 body
     font-family: 'Source Code Pro', monospace
+    height: 100%
     margin: 0
 
 #container
     display: flex
     flex-direction: column
     box-sizing: border-box
-    min-height: 100vh
-    padding: 16px 32px
+    height: 100%
+    padding-right: 32px
+    padding-left: 32px
     @media (min-width: 480px)
         padding-right: 64px
         padding-left: 64px
@@ -26,12 +31,26 @@ body
         width: 480px
         margin-right: auto
         margin-left: auto
+    
+    > *
+        flex-shrink: 0
 
 #grid
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-gap: 16px
     flex-grow: 1
+    padding-top: 16px
+    padding-bottom: 16px
+
+.grid-2
+    grid-column-end: span 2
+
+.grid-3
+    grid-column-end: span 3
+
+.grid-4
+    grid-column-end: span 4
 
 h1
     grid-column-end: span 3
@@ -47,20 +66,20 @@ h1
         font-size: medium
 
 .mdc-text-field
-    grid-column-end: span 2
     margin: 0 !important
 
     input, label
         font-family: 'Source Code Pro', monospace
 
 .mdc-button
-    grid-column-end: span 2
     border-radius: 4px
     height: 46px
 
 footer
     display: flex
     justify-content: flex-end
+    padding-top: 16px
+    padding-bottom: 16px
 
     a
         color: inherit
