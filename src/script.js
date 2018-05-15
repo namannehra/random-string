@@ -90,22 +90,27 @@ const initLength = () => {
     const ele = document.querySelector('#length')
     ele.value = length
     ele.addEventListener('input', () => {
-        if (!ele.validity.valid) {
-            return
+        if (ele.validity.valid) {
+            length = Number(ele.value)
+            localStorage.setItem('length', length)
+        } else {
+            length = 0
         }
-        length = Number(ele.value)
-        localStorage.setItem('length', length)
         generate()
     })
 }
 initLength()
 
 const generate = () => {
-    let str = ''
-    for (let i = 0; i < length; i++) {
-        str += characters.random()
+    if (characters.size) {
+        let str = ''
+        for (let i = 0; i < length; i++) {
+            str += characters.random()
+        }
+        stringEle.value = str
+    } else {
+        stringEle.value = ''
     }
-    stringEle.value = str
 }
 generate()
 
