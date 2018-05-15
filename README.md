@@ -10,6 +10,6 @@
 ### Scripts
 - `start`- Runs development configuration with live reloading
 - `build`- Outputs development build in `./build`
-- `build`- Outputs development build in `./build` everytime a change is made
+- `watch`- Outputs development build in `./build` everytime a change is made
 - `build-prod`- Outputs production build in `./build`
 - `serve`- Serves files form `./build`
