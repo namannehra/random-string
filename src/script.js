@@ -92,7 +92,7 @@ const initLength = () => {
         length = Number(str)
     }
     const ele = document.querySelector('#length')
-    ele.value = str
+    ele.value = length
     ele.addEventListener('input', () => {
         if (ele.validity.valid) {
             length = Number(ele.value)
