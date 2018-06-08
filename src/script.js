@@ -22,7 +22,7 @@ const initTitle = () => {
         if ('attributeStyleMap' in Element.prototype) {
             titleEle.attributeStyleMap.set('font-size', CSS.px(fontSize))
         } else {
-        /* browser support */
+            /* browser support */
             titleEle.style.fontSize = fontSize + 'px'
         }
     }
@@ -150,7 +150,8 @@ copyEle.addEventListener('click', () => {
     } else {
         /* browser support */
         stringEle.focus()
-        stringEle.select()
+        /* input.select() doesn't work on iOS Safari */
+        stringEle.setSelectionRange(0, length)
         const copied = document.execCommand('copy')
         snackbar.show({
             message: copied ? 'Copied' : 'Copy failed'
