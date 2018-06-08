@@ -18,9 +18,13 @@ const initTitle = () => {
     const titleLength = titleEle.textContent.length
     const handleResize = () => {
         const titleWidth = titleEle.clientWidth
+        const fontSize = (titleWidth - 4) / titleLength / 0.6
+        if ('attributeStyleMap' in Element.prototype) {
+            titleEle.attributeStyleMap.set('font-size', CSS.px(fontSize))
+        } else {
         /* browser support */
-        // titleEle.attributeStyleMap.set('font-size', (titleWidth - 4) / titleLength / 0.6 + 'px')
-        titleEle.style.fontSize = (titleWidth - 4) / titleLength / 0.6 + 'px'
+            titleEle.style.fontSize = fontSize + 'px'
+        }
     }
     addEventListener('resize', handleResize)
     handleResize()
