@@ -9,6 +9,9 @@ const common = require('./webpack.common')
 const config = {
     mode: 'development',
     devtool: 'eval-source-map',
+    output: {
+        filename: 'script.js',
+    },
     watchOptions: {
         ignored: /node_modules/,
     },

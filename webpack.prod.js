@@ -11,6 +11,9 @@ const common = require('./webpack.common')
 
 const config = {
     mode: 'production',
+    output: {
+        filename: '[hash].js',
+    },
     module: {
         rules: [
             {
@@ -69,7 +72,7 @@ const config = {
             },
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.css',
+            filename: '[hash].css',
         }),
     ],
 }
