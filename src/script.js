@@ -10,7 +10,7 @@ import './style.sass'
 import {Range, RangeSet} from './range'
 
 const characters = new RangeSet()
-let length = 24
+let length = 16
 const stringEle = document.querySelector('#string')
 
 const initTitle = () => {
