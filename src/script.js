@@ -20,7 +20,12 @@ const initTitle = () => {
         const titleWidth = titleEle.clientWidth
         const fontSize = (titleWidth - 4) / titleLength / 0.6
         if ('attributeStyleMap' in Element.prototype) {
-            titleEle.attributeStyleMap.set('font-size', CSS.px(fontSize))
+            try {
+                /* Throws in Chrome 66 */
+                titleEle.attributeStyleMap.set('font-size', CSS.px(fontSize))
+            } catch (error) {
+                titleEle.attributeStyleMap.set('font-size', fontSize + 'px')
+            }
         } else {
             /* browser support */
             titleEle.style.fontSize = fontSize + 'px'
