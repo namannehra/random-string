@@ -25,7 +25,7 @@ class App extends Component {
         lowercase: [true, 'a-z', [['a', 'z']]],
         uppercase: [true, 'A-Z', [['A', 'Z']]],
         numbers: [true, '0-9', [['0', '9']]],
-        symbols: [false, '([{', [[' ', '/'], [':', '@'], ['[', '`'], ['{', '~']]],
+        symbols: [false, '([{', [['!', '/'], [':', '@'], ['[', '`'], ['{', '~']]],
     }, ([defaultValue, label, ranges]) => ({
         defaultValue,
         label,
