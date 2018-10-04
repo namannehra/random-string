@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: monospace, monospace;
+    height: 100%;
+    margin: 0;
+}
+
+#App {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 8px 16px 0 16px;
+    --mdc-theme-primary: black;
+    --mdc-theme-secondary: black;
+}
+
+@media (min-width: 480px) {
+    #App {
+        margin: auto;
+        width: 480px;
+    }
+}
+
+#App > * {
+    flex-shrink: 0;
+}

@@ -1,62 +1,38 @@
 'use strict'
 
-const path = require('path')
-const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-const common = require('./webpack.common')
 
 const config = {
     mode: 'development',
+    entry: './src/index.js',
     devtool: 'eval-source-map',
-    output: {
-        filename: 'script.js',
-    },
-    watchOptions: {
-        ignored: /node_modules/,
+    devServer: {
+        host: '0.0.0.0',
     },
     module: {
         rules: [
             {
                 test: /\.webmanifest$/,
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        }
-                    },
+                    'file-loader',
+                    'webmanifest-loader',
                 ]
             }, {
-                test: /\.(scss|sass)$/,
+                test: /\.css$/,
                 use: [
-                    {
-                        loader: 'style-loader',
-                        options: {
-                            singleton: true,
-                        },
-                    }, {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                        },
-                    }, {
-                        loader: 'sass-loader',
-                        options: {
-                            includePaths: [path.resolve(__dirname, 'node_modules')],
-                            indentWidth: 4,
-                            sourceMap: true,
-                        },
-                    }
-                ]
-            }
-        ]
+                    'style-loader',
+                    'css-loader',
+                ],
+            }, {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader',
+            },
+        ],
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
+        new HtmlWebpackPlugin({template: 'src/index.html'}),
     ],
 }
 
-module.exports = merge(common, config)
+module.exports = config

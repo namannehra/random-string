@@ -1,66 +1,62 @@
 'use strict'
 
-const path = require('path')
-const merge = require('webpack-merge')
+const MinifyPlugin = require('babel-minify-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
-const common = require('./webpack.common')
+const {resolve} = require('path')
 
 const config = {
     mode: 'production',
+    entry: './src/index.js',
     output: {
         filename: '[hash].js',
+        path: resolve(__dirname, 'build'),
     },
     module: {
         rules: [
             {
                 test: /\.webmanifest$/,
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                        }
-                    },
+                    'file-loader',
+                    'webmanifest-loader',
                 ]
             }, {
-                test: /\.(scss|sass)$/,
+                test: /\.css$/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    }, {
-                        loader: 'css-loader',
-                    }, {
-                        loader: 'sass-loader',
-                        options: {
-                            includePaths: [path.resolve(__dirname, 'node_modules')],
-                            indentWidth: 4,
-                        },
-                    }
-                ]
-            }
-        ]
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                ],
+            }, {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader',
+            },
+        ],
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                uglifyOptions: {
-                    output: {
-                        comments: false,
-                    },
+            new OptimizeCSSAssetsPlugin({
+                cssProcessorPluginOptions: {
+                    preset: [
+                        'default',
+                        {
+                            discardComments: {removeAll: true},
+                        },
+                    ],
                 },
             }),
-            new OptimizeCSSAssetsPlugin(),
+            new MinifyPlugin({}, {comments: false}),
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['build']),
+        new MiniCssExtractPlugin({
+            filename: '[hash].css',
+        }),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: 'src/index.html',
             minify: {
                 collapseBooleanAttributes: true,
                 collapseInlineTagWhitespace: true,
@@ -68,13 +64,9 @@ const config = {
                 decodeEntities: true,
                 removeAttributeQuotes: true,
                 removeComments: true,
-                removeRedundantAttributes: true,
             },
-        }),
-        new MiniCssExtractPlugin({
-            filename: '[hash].css',
         }),
     ],
 }
 
-module.exports = merge(common, config)
+module.exports = config

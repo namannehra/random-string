@@ -1,0 +1,70 @@
+header {
+    margin: 8px 0;
+}
+
+h1 {
+    white-space: nowrap;
+    margin: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    margin: 8px 0;
+}
+
+.mdc-form-field {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* temp */
+.mdc-text-field::before, .mdc-text-field::after {
+    content: none;
+}
+
+.mdc-floating-label {
+    font-family: inherit;
+}
+
+/* temp */
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--mdc-theme-primary);
+}
+
+.mdc-text-field__input {
+    font-family: inherit;
+}
+
+.mdc-button {
+    font-family: inherit;
+    font-weight: bolder;
+    height: 48px;
+}
+
+.string {
+    margin: 8px 0;
+}
+
+.copy {
+    margin: 8px 0;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+footer {
+    text-align: right;
+    margin: 8px 0 16px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.mdc-snackbar__text {
+    font-family: inherit;
+}
