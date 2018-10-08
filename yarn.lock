@@ -827,36 +827,36 @@
     hyperform "^0.9.9"
     mutation-observer "^1.0.3"
 
-"@rmwc/base@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@rmwc/base/-/base-3.0.0.tgz#5e64c4c3070be2e3d3e8565cb7c3e92ceb64a3b6"
-  integrity sha512-DzWBK8s1dESov0x89d97Fg32KwGOASmL8nkU6mdVq8MPFzo0gKIuhmfurktrcfchQT8tQa55Jfty8ZbRaGiQxw==
+"@rmwc/base@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/base/-/base-3.0.4.tgz#e2a09458d9ab756e3145b60d9e6490fc43251a42"
+  integrity sha512-k0wWypwtyZZPXpghisxozVx4jFFVrlw8Xeme50PDZXyb0f1V0Ez80Byrc33QhjJdFu5vgOCVhDM1mLW5LadTCg==
   dependencies:
     classnames "^2.2.5"
     hyperform "^0.9.9"
     mutation-observer "^1.0.3"
 
-"@rmwc/button@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@rmwc/button/-/button-3.0.3.tgz#36d6e3e73854d4784d2e41490fe606c2b3747a7d"
-  integrity sha512-TfWxD1H038Rc/HpEvyzFe3+Y9nf1+f4WElERQn1s/dPr1Nb4QiCZym0wDj+ui3jagDjE4u33ByYoEIq39coPBA==
+"@rmwc/button@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/button/-/button-3.0.4.tgz#6b98e74c9344dd195cbf969b1a4607bf222815a6"
+  integrity sha512-vVrRVNHkqaIbO2oovZCOLJ0j2LwYPjOM7922SiaeqtVsgGrov09SeZRAviNIdAnZ/4FxEzoyRnYcIXPT/hof+w==
   dependencies:
     "@material/button" "~0.40.0"
-    "@rmwc/base" "^3.0.0"
-    "@rmwc/icon" "^3.0.3"
+    "@rmwc/base" "^3.0.4"
+    "@rmwc/icon" "^3.0.4"
     "@rmwc/provider" "^3.0.3"
-    "@rmwc/ripple" "^3.0.0"
+    "@rmwc/ripple" "^3.0.4"
     prop-types "^15.6.1"
 
-"@rmwc/checkbox@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@rmwc/checkbox/-/checkbox-3.0.0.tgz#42ee872581cd16f88ff3e1cf44bb1a65bbbf2bff"
-  integrity sha512-UkUwcVydY0sy0nJ767jDuE1XLACzrgMBKCDiORZDcbcPjQnalSbZV+H9CcDDQNc0SXx+QA+Yz4pJ6NkEd4JIXA==
+"@rmwc/checkbox@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/checkbox/-/checkbox-3.0.4.tgz#97282ab7ee6afaf02d7e8b18ac0a2b6d16fc051e"
+  integrity sha512-hm+WX5Ab1RGFMM/hwXc01wLXEOPv0sL8stDPYQI7SEhTJN/QgKU0JIruFomyJZnfK29d0NWMnd0DoHD4IxTenQ==
   dependencies:
     "@material/checkbox" "~0.40.0"
-    "@rmwc/base" "^3.0.0"
-    "@rmwc/formfield" "^3.0.0"
-    "@rmwc/ripple" "^3.0.0"
+    "@rmwc/base" "^3.0.4"
+    "@rmwc/formfield" "^3.0.4"
+    "@rmwc/ripple" "^3.0.4"
 
 "@rmwc/floating-label@^1.10.1-alpha.0":
   version "1.10.1-alpha.0"
@@ -865,13 +865,13 @@
   dependencies:
     "@rmwc/base" "^1.10.1-alpha.0"
 
-"@rmwc/formfield@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@rmwc/formfield/-/formfield-3.0.0.tgz#9f8657dfbd73c2c76a7d614b466c69f189b88f8d"
-  integrity sha512-7HJxlejvnVqibeWmsOmYDIltZXNdsYqubouuHrea31yfFSK3quw4NejM9jcdke3p4M2ey364QZzZhCG7gxKktA==
+"@rmwc/formfield@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/formfield/-/formfield-3.0.4.tgz#6c02c8058f59767d3a5c84b5c1eac773e5c5f6c2"
+  integrity sha512-4ID/Vnx1gQDcLk650zf0XAha5/2uNw3mNqBzmghzYnoO43hMArO1KTy273x5OKXai1IpEB/fMc787aO3qn8aaw==
   dependencies:
     "@material/form-field" "~0.40.0"
-    "@rmwc/base" "^3.0.0"
+    "@rmwc/base" "^3.0.4"
 
 "@rmwc/icon@^1.10.1-alpha.0":
   version "1.10.1-alpha.0"
@@ -883,12 +883,12 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@rmwc/icon@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@rmwc/icon/-/icon-3.0.3.tgz#c897ed8616f29043bacb369634efc374aa3c7dc8"
-  integrity sha512-EIvFQ8rp+NTRD47HlI1geqYQJ1SyLohDGLJZ83brJ77idS/pniGWA5S3EcZz/3y0riYHshk/I5A+7dj160wP6w==
+"@rmwc/icon@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/icon/-/icon-3.0.4.tgz#a244f759d64444028c7155eb17b3b195a08ef017"
+  integrity sha512-vcedv4MepOOcgjtKEZcDE198ltcmXH58EgUJ8fDviCdXuArbObXk68p9ROlfJk7HBrdCpjZn3zb1QK1dCTcXWg==
   dependencies:
-    "@rmwc/base" "^3.0.0"
+    "@rmwc/base" "^3.0.4"
     "@rmwc/provider" "^3.0.3"
     classnames "^2.2.5"
     prop-types "^15.6.1"
@@ -919,24 +919,24 @@
   dependencies:
     prop-types "^15.6.1"
 
-"@rmwc/ripple@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@rmwc/ripple/-/ripple-3.0.0.tgz#f95fe0cc0b8978fb7d3e598f895fe824c3f2e9b9"
-  integrity sha512-8qUqGhItj7nASecnIGJf1PWteCWdSbqDOiINcp9Cy34JPh7XuHBUbOwvQP5+O7ctQzalHHxHM7bNBC5g9kffrw==
+"@rmwc/ripple@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/ripple/-/ripple-3.0.4.tgz#17ba50d91826c85fea8ac6e8b60dfcd0c0bbb267"
+  integrity sha512-1cH/rOGKHiAZLQFw6lv5ql9saYVFhOpgCQOGwlYfruK3yGFsT7U/9RvJe7zIYzNpwX0z1xCz+3VOOAz8bnplbw==
   dependencies:
     "@material/ripple" "~0.40.0"
-    "@rmwc/base" "^3.0.0"
+    "@rmwc/base" "^3.0.4"
     classnames "^2.2.5"
 
-"@rmwc/snackbar@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@rmwc/snackbar/-/snackbar-3.0.3.tgz#7fdd45ec87202ed1275004e2d11d6698cd1c1fe4"
-  integrity sha512-3Da03cNGeEji+T12jIZ9xuKIY7EpWcuuh7Z1bDUGuWufJS8HHSdQW2/ZwURka39li9V61Bl8ezWkFSCpnOxK9w==
+"@rmwc/snackbar@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rmwc/snackbar/-/snackbar-3.0.4.tgz#4ed8c79d0ba602fd5c4c523dae788de7bb6c77c6"
+  integrity sha512-OTtxGGhh2RoV80tOG0voR8GrP6QOcvWNlZfI0FX7sruxcJPC5I4oisBejDMpGoK1EeEvKkgeicPbPcHS/zr+eg==
   dependencies:
     "@material/animation" "~0.39.0"
     "@material/snackbar" "~0.40.0"
-    "@rmwc/base" "^3.0.0"
-    "@rmwc/button" "^3.0.3"
+    "@rmwc/base" "^3.0.4"
+    "@rmwc/button" "^3.0.4"
 
 "@rmwc/text-field@^1.10.1-alpha.0":
   version "1.10.1-alpha.0"
@@ -1811,11 +1811,11 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.0.0, browserslist@^4.1.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.1.2.tgz#632feb46d1cbdd6bb1a6eb660eff68f2345ae7e7"
-  integrity sha512-docXmVcYth9AiW5183dEe2IxnbmpXF4jiM6efGBVRAli/iDSS894Svvjenrv5NPqAJ4dEJULmT4MSvmLG9qoYg==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.2.0.tgz#3e5e5edf7fa9758ded0885cf88c1e4be753a591c"
+  integrity sha512-Berls1CHL7qfQz8Lct6QxYA5d2Tvt4doDWHcjvAISybpd+EKZVppNtXgXhaN6SdrPKo7YLTSZuYBs5cYrSWN8w==
   dependencies:
-    caniuse-lite "^1.0.30000888"
+    caniuse-lite "^1.0.30000889"
     electron-to-chromium "^1.3.73"
     node-releases "^1.0.0-alpha.12"
 
@@ -1910,10 +1910,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000888:
-  version "1.0.30000889"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000889.tgz#53e266c83e725ad3bd2e4a3ea76d5031a8aa4c3e"
-  integrity sha512-MFxcQ6x/LEEoaIhO7Zdb7Eg8YyNONN+WBnS5ERJ0li2yRw51+i4xXUNxnLaveTb/4ZoJqsWKEmlomhG2pYzlQA==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000889:
+  version "1.0.30000890"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000890.tgz#86a18ffcc65d79ec6a437e985761b8bf1c4efeaf"
+  integrity sha512-4NI3s4Y6ROm+SgZN5sLUG4k7nVWQnedis3c/RWkynV5G6cHSY7+a8fwFyn2yoBDE3E6VswhTNNwR3PvzGqlTkg==
 
 chalk@^1.1.3:
   version "1.1.3"
@@ -2705,9 +2705,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.73:
-  version "1.3.73"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.73.tgz#aa67787067d58cc3920089368b3b8d6fe0fc12f6"
-  integrity sha512-6PIg7v9zRoVGh6EheRF8h6Plti+3Yo/qtHobS4/Htyt53DNHmKKGFqSae1AIk0k1S4gCQvt7I2WgpbuZNcDY+g==
+  version "1.3.75"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.75.tgz#dd04551739e7371862b0ac7f4ddaa9f3f95b7e68"
+  integrity sha512-nLo03Qpw++8R6BxDZL/B1c8SQvUe/htdgc5LWYHe5YotV2jVvRUMP5AlOmxOsyeOzgMiXrNln2mC05Ixz6vuUQ==
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -4423,9 +4423,9 @@ npm-bundled@^1.0.1:
   integrity sha512-m/e6jgWu8/v5niCUKQi9qQl8QdeEduFA96xHDDzFGqly0OOjI7c+60KM/2sppfnUU9JJagf+zs+yGhqSOFj71g==
 
 npm-packlist@^1.1.6:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.1.11.tgz#84e8c683cbe7867d34b1d357d893ce29e28a02de"
-  integrity sha512-CxKlZ24urLkJk+9kCm48RTQ7L4hsmgSVzEk0TLGPzzyuFxD7VNgy5Sl24tOLMzQv773a/NeJ1ce1DKeacqffEA==
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.1.12.tgz#22bde2ebc12e72ca482abd67afc51eb49377243a"
+  integrity sha512-WJKFOVMeAlsU/pjXuqVdzU0WfgtIBCupkEVwn+1Y0ERAbUfWw8R4GjgVbaKnUjRoD2FoQbHOCbOyT5Mbs9Lw4g==
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
@@ -5963,13 +5963,13 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-style-loader@^0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.23.0.tgz#8377fefab68416a2e05f1cabd8c3a3acfcce74f1"
-  integrity sha512-uCcN7XWHkqwGVt7skpInW6IGO1tG6ReyFQ1Cseh0VcN6VdcFQi62aG/2F3Y9ueA8x4IVlfaSUxpmQXQD9QrEuQ==
+style-loader@^0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.23.1.tgz#cb9154606f3e771ab6c4ab637026a1049174d925"
+  integrity sha512-XK+uv9kWwhZMZ1y7mysB+zoihsEj4wneFWAS5qoiLwzW0WzSqMrrsIy+a3zkQJq0ipFtBpX5W3MqyRIBF/WFGg==
   dependencies:
     loader-utils "^1.1.0"
-    schema-utils "^0.4.5"
+    schema-utils "^1.0.0"
 
 stylehacks@^4.0.0:
   version "4.0.1"
