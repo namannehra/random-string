@@ -7,8 +7,93 @@
         <meta name="theme-color" content="white">
         <title>random-string</title>
         <link rel="manifest" href="<%= require('./manifest.webmanifest') %>">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
     </head>
     <body>
-        <div id="App"></div>
+        <header>
+            <h1>random-string</h1>
+        </header>
+        <form>
+            <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                    <input id="lowercase" class="mdc-checkbox__native-control" type="checkbox" checked>
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+                <label for="lowercase">a-z</label>
+            </div>
+            <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                    <input id="uppercase" class="mdc-checkbox__native-control" type="checkbox" checked>
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+                <label for="uppercase">A-Z</label>
+            </div>
+            <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                    <input id="numbers" class="mdc-checkbox__native-control" type="checkbox" checked>
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+                <label for="numbers">0-9</label>
+            </div>
+            <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                    <input id="symbols" class="mdc-checkbox__native-control" type="checkbox">
+                    <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                </div>
+                <label for="symbols">([{</label>
+            </div>
+            <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
+                <input id="length" class="mdc-text-field__input" type="number" min="1" max="65536" required>
+                <label for="length" class="mdc-floating-label mdc-floating-label--float-above">Length</label>
+                    <div class="mdc-notched-outline mdc-notched-outline--notched">
+                        <svg>
+                            <path class="mdc-notched-outline__path"/>
+                        </svg>
+                    </div>
+                <div class="mdc-notched-outline__idle"></div>
+            </div>
+            <button class="mdc-button mdc-button--unelevated">Generate</button>
+        </form>
+        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
+            <input id="string" class="mdc-text-field__input" readonly>
+            <label for="string" class="mdc-floating-label mdc-floating-label--float-above">String</label>
+                <div class="mdc-notched-outline mdc-notched-outline--notched">
+                    <svg>
+                        <path class="mdc-notched-outline__path"/>
+                    </svg>
+                </div>
+            <div class="mdc-notched-outline__idle"></div>
+        </div>
+        <button id="copy" class="mdc-button mdc-button--unelevated">Copy</button>
+        <div class="gap"></div>
+        <footer>
+            <a href="https://github.com/namannehra/random-string" target="_blank">View source</a>
+        </footer>
+        <div class="mdc-snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+            <div class="mdc-snackbar__text"></div>
+            <div class="mdc-snackbar__action-wrapper">
+                <button type="button" class="mdc-snackbar__action-button"></button>
+            </div>
+        </div>
     </body>
 </html>

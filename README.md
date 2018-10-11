@@ -1,6 +1,6 @@
 # random-string
 [Website](https://random-string.firebaseapp.com) to generate string of random characters.
-Uses [React Material Web Components](https://github.com/jamesmfriedman/rmwc).
+Uses [Material Components for the web](https://github.com/material-components/material-components-web).
 
 ## Development
 ```
