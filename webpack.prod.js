@@ -11,7 +11,7 @@ const config = {
     mode: 'production',
     entry: './src/index.js',
     output: {
-        filename: '[hash].js',
+        filename: '[contenthash].js',
         path: resolve(__dirname, 'build'),
     },
     module: {
@@ -58,7 +58,7 @@ const config = {
     plugins: [
         new CleanWebpackPlugin(['build']),
         new MiniCssExtractPlugin({
-            filename: '[hash].css',
+            filename: '[contenthash].css',
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
