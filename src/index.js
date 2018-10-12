@@ -93,9 +93,9 @@ const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'))
 
 const copyButton = document.querySelector('#copy')
 copyButton.addEventListener('click', () => {
-    stringInput.select()
+    /* input.select() doesn't work on iOS Safari */
+    stringInput.setSelectionRange(0, length)
     const copied = document.execCommand('copy')
     getSelection().empty()
-    stringInput.blur()
     snackbar.show({message: copied ? 'Copied' : 'Copy failed'})
 })
