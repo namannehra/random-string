@@ -4,14 +4,14 @@ import {MDCTextField} from '@material/textfield'
 import {MDCRipple} from '@material/ripple'
 import {MDCSnackbar} from '@material/snackbar'
 
-import FillWidthWithText from './FillWidthWithText'
+import TextFillsWidth from './TextFillsWidth'
 import objectMap from './objectMap'
 import Range from './Range'
 import getRandomString from './getRandomString'
 import './style.sass'
 
-const headingFillWidthWithText = new FillWidthWithText(document.querySelector('h1'), 0.6)
-headingFillWidthWithText.update()
+const headingFillsWidth = new TextFillsWidth(document.querySelector('h1'), 0.6)
+headingFillsWidth.update()
 
 const form = document.querySelector('form')
 form.addEventListener('submit', event => {
@@ -83,7 +83,7 @@ stringInput.value = getString()
 const stringTextField = new MDCTextField(stringInput.parentElement)
 
 addEventListener('resize', () => {
-    headingFillWidthWithText.update()
+    headingFillsWidth.update()
     lengthTextField.layout()
     stringTextField.layout()
 })

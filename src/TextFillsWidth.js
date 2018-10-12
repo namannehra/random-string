@@ -1,4 +1,4 @@
-class FillWidthWithText {
+class TextFillsWidth {
 
     constructor(element, ratio) {
         this.element = element
@@ -11,4 +11,4 @@ class FillWidthWithText {
 
 }
 
-export default FillWidthWithText
+export default TextFillsWidth
