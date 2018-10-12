@@ -12,9 +12,6 @@ import './style.sass'
 
 const headingFillWidthWithText = new FillWidthWithText(document.querySelector('h1'), 0.6)
 headingFillWidthWithText.update()
-addEventListener('resize', () => {
-    headingFillWidthWithText.update()
-})
 
 const form = document.querySelector('form')
 form.addEventListener('submit', event => {
@@ -66,7 +63,7 @@ lengthInput.addEventListener('input', () => {
         generateString()
     }
 })
-new MDCTextField(lengthInput.parentElement)
+const lengthTextField = new MDCTextField(lengthInput.parentElement)
 
 for (const button of document.querySelectorAll('.mdc-button')) {
     new MDCRipple(button)
@@ -84,6 +81,12 @@ const getString = () => {
 const stringInput = document.querySelector('#string')
 stringInput.value = getString()
 const stringTextField = new MDCTextField(stringInput.parentElement)
+
+addEventListener('resize', () => {
+    headingFillWidthWithText.update()
+    lengthTextField.layout()
+    stringTextField.layout()
+})
 
 const generateString = () => {
     stringTextField.value = getString()
