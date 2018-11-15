@@ -2,6 +2,7 @@
 
 const MinifyPlugin = require('babel-minify-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -57,6 +58,7 @@ const config = {
     },
     plugins: [
         new CleanWebpackPlugin(['build']),
+        new CopyWebpackPlugin(['src/google66f441ec356ff73b.html']),
         new MiniCssExtractPlugin({
             filename: '[contenthash].css',
         }),
