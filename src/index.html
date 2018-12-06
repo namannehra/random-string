@@ -78,27 +78,27 @@
                 </div>
                 <label for="symbols">([{</label>
             </div>
-            <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
+            <div class="mdc-text-field mdc-text-field--outlined">
                 <input id="length" class="mdc-text-field__input" type="number" min="1" max="65536" required>
-                <label for="length" class="mdc-floating-label mdc-floating-label--float-above">Length</label>
-                    <div class="mdc-notched-outline mdc-notched-outline--notched">
-                        <svg>
-                            <path class="mdc-notched-outline__path"/>
-                        </svg>
+                <div class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+                    <div class="mdc-notched-outline__leading"></div>
+                    <div class="mdc-notched-outline__notch">
+                        <label class="mdc-floating-label mdc-floating-label--float-above" for="length">Length</label>
                     </div>
-                <div class="mdc-notched-outline__idle"></div>
+                    <div class="mdc-notched-outline__trailing"></div>
+                </div>
             </div>
             <button class="mdc-button mdc-button--unelevated">Generate</button>
         </form>
-        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--dense">
+        <div class="mdc-text-field mdc-text-field--outlined">
             <input id="string" class="mdc-text-field__input" readonly>
-            <label for="string" class="mdc-floating-label mdc-floating-label--float-above">String</label>
-                <div class="mdc-notched-outline mdc-notched-outline--notched">
-                    <svg>
-                        <path class="mdc-notched-outline__path"/>
-                    </svg>
+            <div class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                    <label class="mdc-floating-label mdc-floating-label--float-above" for="string">String</label>
                 </div>
-            <div class="mdc-notched-outline__idle"></div>
+                <div class="mdc-notched-outline__trailing"></div>
+            </div>
         </div>
         <button id="copy" class="mdc-button mdc-button--unelevated">Copy</button>
         <div class="gap"></div>

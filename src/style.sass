@@ -49,10 +49,6 @@ form
     margin-top: 8px
     margin-bottom: 8px
 
-/* temp */
-.mdc-text-field::before, .mdc-text-field::after
-    content: none
-
 .mdc-text-field
     margin-top: 8px
     margin-bottom: 8px
@@ -63,7 +59,8 @@ form
 .mdc-floating-label
     font-family: inherit
 
-.mdc-text-field__input:required + .mdc-floating-label::after
+/* Remove "*" at the end of label from required text field */
+.mdc-text-field__input:required ~ .mdc-notched-outline .mdc-floating-label::after
     content: none
 
 .mdc-button
