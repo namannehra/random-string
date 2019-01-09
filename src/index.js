@@ -101,6 +101,7 @@ copyButton.addEventListener('click', () => {
     stringInput.setSelectionRange(0, length)
     const copied = document.execCommand('copy')
     getSelection().empty()
-    stringInput.blur()
-    snackbar.show({message: copied ? 'Copied' : 'Copy failed'})
+    copyButton.focus()
+    snackbar.labelText = copied ? 'Copied' : 'Copy failed'
+    snackbar.open()
 })
