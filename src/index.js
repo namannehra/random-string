@@ -5,97 +5,89 @@ import {MDCRipple} from '@material/ripple'
 import {MDCSnackbar} from '@material/snackbar'
 
 import TextFillsWidth from './TextFillsWidth'
-import objectMap from './objectMap'
 import Range from './Range'
 import getRandomString from './getRandomString'
 import './style.sass'
 
-const headingFillsWidth = new TextFillsWidth(document.querySelector('h1'), 0.6)
-headingFillsWidth.update()
+{
+    const heading = document.querySelector('h1')
+    const headingFillsWidth = new TextFillsWidth(heading, 0.6)
+    headingFillsWidth.update()
+    addEventListener('resize', () => {
+        headingFillsWidth.update()
+    })
+}
 
-const form = document.querySelector('form')
-form.addEventListener('submit', event => {
-    event.preventDefault()
-    generateString()
-})
+{
+    const form = document.querySelector('form')
+    form.addEventListener('submit', event => {
+        event.preventDefault()
+        updateString()
+    })
+}
 
-const options = objectMap({
-    lowercase: [['a', 'z']],
-    uppercase: [['A', 'Z']],
-    numbers: [['0', '9']],
-    symbols: [['!', '/'], [':', '@'], ['[', '`'], ['{', '~']],
-}, ranges => ({
-    ranges: ranges.map(range => new Range(range[0], range[1])),
-}))
-
-for (const [name, option] of Object.entries(options)) {
+const checkboxes = [
+    ['lowercase', true, [['a', 'z']]],
+    ['uppercase', true, [['A', 'Z']]],
+    ['numbers', true, [['0', '9']]],
+    ['symbols', false, [['!', '/'], [':', '@'], ['[', '`'], ['{', '~']]],
+].map(([name, defaultChecked, range]) => {
     const checkbox = document.querySelector('#' + name)
-    const checked = localStorage.getItem(name)
-    if (checked) {
-        checkbox.checked = checked === 'true'
+    const checkedString = localStorage.getItem(name)
+    if (checkedString === 'true') {
+        checkbox.checked = true
+    } else if (checkedString === 'false') {
+        checkbox.checked = false
+    } else {
+        checkbox.checked = defaultChecked
     }
     checkbox.addEventListener('change', () => {
         localStorage.setItem(name, checkbox.checked)
-        generateString()
+        updateString()
     })
     new MDCCheckbox(checkbox.parentElement)
     new MDCFormField(checkbox.parentElement.parentElement)
-    option.checkbox = checkbox
-}
-
-let length = 16
-const lengthString = localStorage.getItem('length')
-if (lengthString) {
-    length = Number(lengthString)
-}
-const lengthInput = document.querySelector('#length')
-lengthInput.value = length
-lengthInput.addEventListener('input', () => {
-    let newLength = Number(lengthInput.value)
-    if (!Number.isInteger(newLength) || newLength < 0 || newLength > 65536) {
-        newLength = 0
-    }
-    if (newLength !== length) {
-        length = newLength
-        if (length) {
-            localStorage.setItem('length', length)
-        }
-        generateString()
-    }
+    return [checkbox, range.map(([start, end]) => new Range(start, end))]
 })
-const lengthTextField = new MDCTextField(lengthInput.parentElement)
 
-for (const button of document.querySelectorAll('.mdc-button')) {
-    new MDCRipple(button)
+let length = Number(localStorage.getItem('length')) || 16
+
+{
+    const lengthInput = document.querySelector('#length-input')
+    lengthInput.value = length
+    lengthInput.addEventListener('input', () => {
+        let newLength = Number(lengthInput.value)
+        if (!Number.isInteger(newLength) || newLength < 0 || newLength > 65536) {
+            newLength = 0
+        }
+        if (newLength !== length) {
+            length = newLength
+            if (length) {
+                localStorage.setItem('length', length)
+            }
+            updateString()
+            copyButton.disabled = !length
+        }
+    })
+    new MDCTextField(lengthInput.parentElement)
 }
 
 const getString = () => {
-    let allRanges = []
-    for (const {checkbox, ranges} of Object.values(options)) {
-        if (checkbox.checked) {
-            allRanges = allRanges.concat(ranges)
-        }
-    }
-    return getRandomString(allRanges, length)
+    const ranges = checkboxes.filter(([checkbox]) => checkbox.checked).map(([_, ranges]) => ranges)
+    return getRandomString([].concat(...ranges), length)
 }
-const stringInput = document.querySelector('#string')
-stringInput.value = getString()
-const stringTextField = new MDCTextField(stringInput.parentElement)
 
-addEventListener('resize', () => {
-    headingFillsWidth.update()
-    lengthTextField.layout()
-    stringTextField.layout()
-})
-
-const generateString = () => {
-    stringTextField.value = getString()
-}
+const stringTextField = (() => {
+    const stringInput = document.querySelector('#string-input')
+    stringInput.value = getString()
+    return new MDCTextField(stringInput.parentElement)
+})()
 
 const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'))
 
 const copyButton = document.querySelector('#copy')
 copyButton.addEventListener('click', () => {
+    const stringInput = stringTextField.input_
     stringInput.focus()
     /* input.select() doesn't work on iOS Safari */
     stringInput.setSelectionRange(0, length)
@@ -105,3 +97,11 @@ copyButton.addEventListener('click', () => {
     snackbar.labelText = copied ? 'Copied' : 'Copy failed'
     snackbar.open()
 })
+
+for (const button of document.querySelectorAll('.mdc-button')) {
+    new MDCRipple(button)
+}
+
+const updateString = () => {
+    stringTextField.value = getString()
+}

@@ -1,4 +1,11 @@
-/node_modules
+# Builds
 /build
+
+# Cache
 /.firebase
+
+# Dependencies
+/node_modules
+
+# Logs
 /*.log
