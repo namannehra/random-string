@@ -17,10 +17,11 @@ const App_ = () => {
     const appCss = css`
         display: grid;
         grid:
-            'header'
-            'main  '
-            '.     ' 1fr
-            'footer'
+            'header         '
+            'main           '
+            '.              ' 1fr
+            'footer         '
+            /minmax(0, auto)
         ;
         grid-gap: 16px;
         box-sizing: border-box;
