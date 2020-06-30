@@ -82,7 +82,7 @@ const Main_ = () => {
                     variant="outlined"
                     fullWidth
                 ></TextField>
-                <Button onClick={handleCopy}>Copy</Button>
+                <Button onClick={handleCopy} disabled={!randomString}>Copy</Button>
             </main>
             <Snackbar
                 autoHideDuration={4000}
