@@ -1,9 +1,0 @@
-{
-    "name": "random-string",
-    "short_name": "random-string",
-    "description": "Generates string of random characters",
-    "start_url": "/",
-    "display": "standalone",
-    "theme_color": "white",
-    "background_color": "white"
-}

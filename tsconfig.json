@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+
+        // Project Options
+        "jsx": "react",
+        "lib": ["DOM", "ES2017", "ES2018.Promise"],
+        "rootDir": "src",
+        "target": "ESNext",
+
+        // Strict Checks
+        "strict": true,
+
+        // Module Resolution
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "Node",
+
+        // Linter Checks
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+
+        // Advanced
+        "assumeChangesOnlyAffectDirectDependencies": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmitOnError": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+
+    },
+}

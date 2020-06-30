@@ -1,35 +1,29 @@
 {
+    "private": true,
+    "browserslist": [
+        "last 1 year"
+    ],
     "scripts": {
-        "start": "webpack-dev-server --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js",
-        "serve": "firebase serve --port 8000"
+        "start": "parcel serve --port 8000 --hmr-port 8001 --out-dir build/dev src/index.html",
+        "check-ts": "tsc --noEmit",
+        "build": "yarn check-ts && parcel build --out-dir build/prod src/index.html"
     },
     "dependencies": {
-        "@material/button": "^3.1.0",
-        "@material/checkbox": "^3.1.0",
-        "@material/form-field": "^3.1.0",
-        "@material/snackbar": "^3.1.0",
-        "@material/textfield": "^3.1.0"
+        "@emotion/core": "^10.0.28",
+        "@material-ui/core": "^4.10.2",
+        "@types/react": "^16.9.41",
+        "@types/react-dom": "^16.9.8",
+        "@types/react-helmet": "^6.0.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-helmet": "^6.1.0",
+        "unstated-next": "^1.1.0",
+        "use-resize-observer": "^6.1.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.5.5",
-        "@babel/preset-env": "^7.5.5",
-        "autoprefixer": "^9.6.1",
-        "babel-loader": "^8.0.5",
-        "babel-minify-webpack-plugin": "^0.3.1",
-        "clean-webpack-plugin": "^3.0.0",
-        "copy-webpack-plugin": "^5.0.4",
-        "css-loader": "^3.2.0",
-        "file-loader": "^4.2.0",
-        "html-webpack-plugin": "^3.2.0",
-        "mini-css-extract-plugin": "^0.8.0",
-        "node-sass": "^4.12.0",
-        "optimize-css-assets-webpack-plugin": "^5.0.1",
-        "postcss-loader": "^3.0.0",
-        "sass-loader": "^7.3.1",
-        "style-loader": "^1.0.0",
-        "webpack": "^4.39.2",
-        "webpack-cli": "^3.3.7",
-        "webpack-dev-server": "^3.8.0"
+        "parcel": "^1.12.4",
+        "parcel-plugin-nuke-dist": "^1.0.1",
+        "parcel-plugin-static-files-copy": "^2.4.3",
+        "typescript": "~3.9.5"
     }
 }
