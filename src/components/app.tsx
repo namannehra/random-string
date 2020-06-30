@@ -6,7 +6,6 @@ import { memo } from 'react'
 import { Footer } from '../components/footer'
 import { GlobalCss } from '../components/global-css'
 import { Header } from '../components/header'
-import { LinkIcon } from '../components/link-icon'
 import { Main } from '../components/main'
 import { Manifest } from '../components/manifest'
 import { ThemeMeta } from '../components/theme-meta'
@@ -53,7 +52,6 @@ const App_ = () => {
         <ThemeProvider>
             <Manifest></Manifest>
             <ThemeMeta></ThemeMeta>
-            <LinkIcon></LinkIcon>
             <GlobalCss></GlobalCss>
             <OptionsContainer.Provider>
                 <div css={appCss}>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+    <rect height="100%" width="100%" fill="#FFFFFF"></rect>
+    <rect
+        x="25%"
+        y="37.5%"
+        height="25%"
+        width="75%"
+        fill="#000000"
+    ></rect>
+</svg>

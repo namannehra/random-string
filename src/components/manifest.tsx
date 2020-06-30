@@ -4,10 +4,7 @@ import { Helmet } from 'react-helmet'
 import { useTheme } from '../container/theme'
 import { useMounted } from '../hooks/mounted'
 // @ts-ignore
-import darkIcon from '../icons/dark.svg'
-// @ts-ignore
-import lightIcon from '../icons/light.svg'
-import { ThemeType } from '../libs/theme'
+import icon from '../icon.svg'
 
 const Manifest_ = () => {
 
@@ -18,15 +15,6 @@ const Manifest_ = () => {
     useEffect(() => {
         if (!mounted) {
             return
-        }
-        let icon
-        switch (theme.type) {
-            case ThemeType.light:
-                icon = lightIcon
-                break
-            case ThemeType.dark:
-                icon = darkIcon
-                break
         }
         const manifest = {
             name: 'random-string',
@@ -41,7 +29,7 @@ const Manifest_ = () => {
                     src: location.origin + icon,
                     type: 'image/svg+xml',
                     sizes: '512x512',
-                    purpose: 'any maskable',
+                    purpose: 'maskable any',
                 },
             ],
         }
