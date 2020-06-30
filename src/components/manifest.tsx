@@ -42,7 +42,7 @@ const Manifest_ = () => {
         return () => {
             URL.revokeObjectURL(url)
         }
-    }, [theme, mounted])
+    }, [theme, mounted, setManifest])
 
     return (
         <Helmet>
