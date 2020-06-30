@@ -18,7 +18,7 @@ const Manifest_ = () => {
         }
         const manifest = {
             name: 'random-string',
-            short_name: 'random-string',
+            short_name: 'rnd-str',
             description: 'Generate cryptographically secure random strings',
             start_url: location.origin,
             display: 'standalone',
