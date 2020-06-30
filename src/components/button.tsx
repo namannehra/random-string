@@ -25,6 +25,7 @@ const Button_ = (props: ButtonProps) => (
                     }}
                     color="primary"
                     variant="contained"
+                    disableElevation
                     {...props}
                 ></MuiButton>
             )
